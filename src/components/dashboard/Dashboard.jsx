@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
-import { ChevronDown, ArrowUpRight, Bell, Menu, X, TrendingUp, Clock, Brain, Award } from 'lucide-react';
+import { ChevronDown, ArrowUpRight, Bell, Menu, TrendingUp, Clock, Brain, Award } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import Image from 'next/image';
 
 const TestResultsDashboard = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -160,10 +161,12 @@ const TestResultsDashboard = () => {
                         <CardHeader className="pb-2">
                             <div className="flex items-start space-x-4">
                                 <div className="w-20 h-20 relative">
-                                    <img
+                                    <Image
                                         src="/api/placeholder/80/80"
                                         alt="Results"
                                         className="rounded-lg shadow-md"
+                                        width={80}
+                                        height={80}
                                     />
                                     <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
                                         ✓
@@ -200,10 +203,12 @@ const TestResultsDashboard = () => {
                             <div className="border-b border-slate-100 pb-6">
                                 <div className="flex items-center space-x-4">
                                     <div className="relative">
-                                        <img
+                                        <Image
                                             src="/api/placeholder/48/48"
                                             alt="Top scorer"
                                             className="w-12 h-12 rounded-full border-2 border-white shadow-sm"
+                                            width={48}
+                                            height={48}
                                         />
                                         <div className="absolute -top-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
                                             <Award className="w-3 h-3 text-white" />
@@ -398,7 +403,7 @@ const TestResultsDashboard = () => {
                                         ))}
                                     </div>
                                     <p className="text-sm text-slate-500 mt-2">
-                                        Lorem ipsum is simply dummy text of the printing and typesetting industry
+                                        Lorem ipsum is simply dummy text of the printing and typesetting industry &apos;example&apos;.
                                     </p>
                                 </div>
 
